@@ -1,0 +1,117 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6fb;
+    margin: 0;
+    padding: 0;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+/* Container */
+.resume-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 24px 28px;
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+/* Header */
+.name {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;}
+
+.title {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 4px 0 6px;
+    
+}
+
+.contact {
+    font-size: 12.5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 1px solid #d1d5db; /* softer line */
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+}
+
+/* Sections */
+.section {
+    margin-top: 14px;
+}
+
+.section-title {
+    font-size: 12.5px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 2px;
+}
+
+/* Cards */
+.card {
+    margin-bottom: 6px;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* Lists */
+ul {
+    margin: 4px 0 0 16px;
+    padding: 0;
+    font-size: 12.5px;
+}
+
+li {
+    margin-bottom: 2px;
+}
+
+/* Skills */
+.skills {
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+/* Links */
+.contact a,
+.card-title a {
+    color: #1d4ed8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* PRINT FIX (MOST IMPORTANT) */
+@media print {
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+
+    body {
+        background: #fff;
+        font-size: 12px;
+    }
+
+    .resume-container {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .section {
+        margin-top: 10px;
+    }
+
+    li {
+        margin-bottom: 1px;
+    }
+}
