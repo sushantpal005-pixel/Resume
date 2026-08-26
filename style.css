@@ -1,6 +1,4 @@
-/* ================================
-   HARVARD STYLE RESUME
-   ================================ */
+
 
 * {
     margin: 0;
@@ -16,25 +14,13 @@ body {
 }
 
 
-/* ================================
-   RESUME PAGE
-   ================================ */
+
 
 .contact i {
     color: #9e1b32;
     margin-right: 3px;
 }
-/* 
-.resume {
-    width: 8.5in;
-    min-height: 11in;
-    margin: 30px auto;
-    padding: 0.55in 0.65in;
 
-    background: white;
-
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-} */
 
 .resume {
     width: 8.5in;
