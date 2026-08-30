@@ -1,301 +1,536 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume - Sushant Pal</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      /* ================================
+         HARVARD STYLE RESUME
+         ================================ */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #eeeeee;
+        font-family: "Times New Roman", Times, serif;
+        color: #222;
+        line-height: 1.25;
+      }
+      /* ================================
+         RESUME PAGE
+         ================================ */
+      .contact i {
+        color: #9e1b32;
+        margin-right: 3px;
+      }
+      .resume {
+        width: 8.5in;
+        min-height: 11in;
+        margin: 30px auto;
+        padding: 0.4in 0.3in;
+        background: white;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+      }
+      /* ================================
+         HEADER
+         ================================ */
+      .header {
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .header h1 {
+        font-size: 25px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+      }
+      .contact {
+        font-size: 10.5pt;
+      }
+      .contact span {
+        margin: 0 3px;
+      }
+      a {
+        color: #9e1b32;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      /* ================================
+         SECTION
+         ================================ */
+      section {
+        margin-top: 9px;
+      }
+      section h2 {
+        font-size: 11.5pt;
+        font-weight: bold;
+        color: #9e1b32;
+        border-bottom: 1.5px solid #9e1b32;
+        padding-bottom: 1px;
+        margin-bottom: 5px;
+        letter-spacing: 0.4px;
+      }
+      /* ================================
+         SUMMARY
+         ================================ */
+      .summary {
+        font-size: 10pt;
+        text-align: justify;
+        line-height: 1.4;
+      }
+      /* ================================
+         ENTRY
+         ================================ */
+      .entry {
+        margin-bottom: 6px;
+      }
+      .entry-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .entry-header h3 {
+        font-size: 10.8pt;
+        font-weight: bold;
+      }
+      .degree,
+      .company {
+        font-size: 10.5pt;
+        font-style: italic;
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        font-size: 10pt;
+        white-space: nowrap;
+      }
+      .left {
+        display: flex;
+        text-align: right;
+        font-size: 10pt;
+        white-space: nowrap;
+      }
+      /* ================================
+         BODY TEXT
+         ================================ */
+      .details {
+        font-size: 10pt;
+        margin-top: 2px;
+      }
+      ul {
+        margin-top: 2px;
+        padding-left: 18px;
+      }
+      li {
+        font-size: 10pt;
+        margin-bottom: 1.5px;
+      }
+      p {
+        font-size: 10pt;
+      }
+      /* ================================
+         SKILLS
+         ================================ */
+      .skills p {
+        margin-bottom: 3px;
+      }
+      .skills strong {
+        color: #9e1b32;
+      }
+      /* ================================
+         PRINT
+         ================================ */
+      @page {
+        size: A4;
+        margin: 0.25in;
+      }
+      @media print {
+        body {
+          background: white;
+        }
+        .resume {
+          width: 100%;
+          min-height: auto;
+          margin: 0;
+          padding: 0;
+          box-shadow: none;
+        }
+        a {
+          color: #9e1b32;
+        }
+      }
+      /* ================================
+         MOBILE
+         ================================ */
+      @media screen and (max-width: 900px) {
+        .resume {
+          width: 95%;
+          min-height: auto;
+          margin: 10px auto;
+          padding: 30px;
+        }
+        .entry-header {
+          gap: 20px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .resume {
+          width: 100%;
+          min-height: auto;
+          padding: 15px 10px;
+          margin: 0;
+          box-shadow: none;
+        }
+        .header {
+          margin-bottom: 10px;
+        }
+        .header h1 {
+          font-size: 22px;
+        }
+        .contact {
+          font-size: 9.5pt;
+          line-height: 1.5;
+        }
+        section {
+          margin-top: 10px;
+        }
+        section h2 {
+          font-size: 11pt;
+        }
+        .entry-header {
+          flex-direction: column;
+        }
+        .right {
+          text-align: left;
+          margin-top: 2px;
+        }
+        .details,
+        li,
+        p {
+          font-size: 9.5pt;
+        }
+      }
+    </style>
+  </head>
 
-<body>
-
+  <body>
     <div class="resume">
+      <!-- HEADER -->
+      <header class="header">
+        <h1>Sushant Pal</h1>
 
-        <!-- HEADER -->
-        <header class="header">
-            <h1>SUSHANT PAL</h1>
+        <div class="contact">
+          <span></span>
+          <span><i class="fa-solid fa-phone"></i>+91 8920375796</span>
+          <span></span>
+          <span><i class="fa-solid fa-envelope"></i> sushantpal005@gmail.com</span>
+          <span></span>
+          <a href="https://www.linkedin.com/in/sushant-pal-5a419035a/"
+            ><i class="fa-brands fa-linkedin"></i>LinkedIn</a
+          >
+          <span></span>
+          <a href="https://github.com/sushantpal005-pixel"
+            ><i class="fa-brands fa-github"></i>GitHub</a
+          >
+        </div>
+      </header>
 
-            <div class="contact">
-                <span></span>
-                <span><i class="fa-solid fa-phone"></i>+91 8920375796</span>
-                <span></span>
-                <span><i class="fa-solid fa-envelope"></i> sushantpal005@gmail.com</span>
-                <span></span>
-                <a href="https://www.linkedin.com/in/sushant-pal-5a419035a/"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-                <span></span>
-                <a href="https://github.com/sushantpal005-pixel"><i class="fa-brands fa-github"></i>GitHub</a>
-            </div>
-        </header>
+      <!-- SUMMARY -->
+      <section>
+        <h2>SUMMARY</h2>
+        <p class="summary">
+          Full Stack Developer (MERN) with hands-on experience building
+          production-grade web applications, including a Learning Management
+          System, real-time chat platform, and secure credential manager.
+          Proficient in React.js, Node.js, Express.js, MongoDB, RESTful API
+          design, and Redux Toolkit (RTK Query), with strong foundations in Data
+          Structures & Algorithms (50+ LeetCode problems solved).
+        </p>
+      </section>
 
+      <!-- EXPERIENCE -->
+      <section>
+        <h2>EXPERIENCE</h2>
 
-        <!-- EDUCATION -->
-        <section>
-            <h2>EDUCATION</h2>
-
-            <div class="entry">
-                <div class="entry-header">
-                    <div>
-                        <h3>Raj Kumar Goel Institute of Technology and Management</h3>
-                        <p class="degree">B.Tech in Computer Science & Engineering</p>
-                    </div>
-
-                    <div class="right">
-                        <span>Ghaziabad, India</span>
-                        <span>2023 – 2027</span>
-                    </div>
-                </div>
-
-                
-            </div>
-
-            <div class="entry">
-                <div class="entry-header">
-                    <div>
-                        <h3>SG Public School</h3>
-                        <p class="degree">Class XII</p>
-                    </div>
-
-                    <div class="right">
-                        <span>Ghaziabad, India</span>
-                        <span>2023</span>
-                    </div>
-                </div>
-
-                
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <h3>MERN Stack Development Virtual Intern</h3>
+              <p class="company">EduSkills (AICTE)</p>
             </div>
 
-            <div class="entry">
-                <div class="entry-header">
-                    <div>
-                        <h3>Diwakar Model School</h3>
-                        <p class="degree">Class X</p>
-                    </div>
-
-                    <div class="right">
-                        <span>Ghaziabad, India</span>
-                        <span>2021</span>
-                    </div>
-                </div>
-
-                
+            <div class="right">
+              <span>Remote</span>
+              <span>Jun 2026 – Aug 2026</span>
             </div>
-        </section>
+          </div>
+
+          <ul>
+            <li>
+              Built full-stack web application modules using React.js, Node.js,
+              Express.js, and MongoDB as part of a structured MERN stack
+              development curriculum.
+            </li>
+            <li>
+              Designed and implemented RESTful APIs for authentication, CRUD
+              operations, and data management across 3+ project modules.
+            </li>
+          </ul>
+        </div>
 
         
-         EXPERIENCE 
-        <section>
-            <h2>EXPERIENCE</h2>
 
-            <div class="entry">
-                <div class="entry-header">
-                    <div>
-                        <h3>Software Developer Intern</h3>
-                        <p class="company">Company Name</p>
-                    </div>
+      <!-- PROJECTS -->
+      <section>
+        <h2>PROJECTS</h2>
 
-                    <div class="right">
-                        <span>Delhi, India</span>
-                        <span>Jun 2025 – Aug 2025</span>
-                    </div>
-                </div>
-
-                <ul>
-                    <li>
-                        Developed responsive web applications using React.js,
-                        Node.js and MongoDB.
-                    </li>
-
-                    <li>
-                        Designed and implemented REST APIs for authentication,
-                        user management and application data.
-                    </li>
-
-                    <li>
-                        Improved application performance and reduced API
-                        response time by 25%.
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section>
-            <h2>PROJECTS</h2>
-
-            <div class="entry">
-                <div class="entry-header">
-                    <div>
-                        <h3>LMS - Learning Management System | React.js, Node.js, Express.js, MongoDB</h3>
-                    </div>
-
-                    <span class="live">
-                        <a href="https://lms-onlinelearning.onrender.com/">Live | </a>
-                        <a href="https://github.com/sushantpal005-pixel/LMS-Deploy">GitHub</a>
-                    </span>
-                </div>
-
-                <ul>
-                    <li>
-                        
-                        Developed a full-stack LMS with JWT authentication, course management, enrollment, and role-based access control.
-                    </li>
-
-                    <li>
-                        
-                        Built RESTful APIs using Node.js and Express.js with MongoDB for backend data management and CRUD operations.
-                    </li>
-
-                    <li>
-                        
-                        Implemented Redux Toolkit and RTK Query for state management, API integration, caching, and efficient data fetching.
-                    </li>
-                </ul>
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <h3>
+                LMS - Learning Management System | React.js, Node.js,
+                Express.js, MongoDB
+              </h3>
             </div>
 
+            <span class="live">
+              <a href="https://lms-onlinelearning.onrender.com/"
+                >Live |
+              </a>
+              <a href="https://github.com/sushantpal005-pixel/LMS-Deploy"
+                >GitHub</a
+              >
+            </span>
+          </div>
 
-            <div class="entry">
-                <div class="entry-header">
-                    <div>
-                        <h3>ConvoHub - Real-Time Chat Application | React.js, Node.js, Socket.io, MongoDB</h3>
-                    </div>
+          <ul>
+            <li>
+              Developed a full-stack Learning Management System with
+              authentication, course management, and enrollment workflows for
+              student and admin roles.
+            </li>
+            <li>
+              Built and deployed 15+ RESTful API endpoints using Node.js,
+              Express.js, and MongoDB with full CRUD operations and structured
+              schemas.
+            </li>
+            <li>
+              Implemented Redux Toolkit and RTK Query for state management,
+              reducing redundant API calls and improving data-fetching
+              efficiency.
+            </li>
+          </ul>
+        </div>
 
-                    <div class="live">
-                        <a href="https://convohub-ju3o.onrender.com/">Live | </a>
-                        <a href="https://github.com/sushantpal005-pixel/convoHub-mern">GitHub</a>
-                    </div>
-                </div>
-
-                <ul>
-                    <li>
-                        Developed a real-time chat application using the MERN stack with Socket.io for instant messaging.
-                    </li>
-
-                    <li>
-                        <!-- Implemented user authentication and online user status tracking to enhance real-time communication. -->
-                         Implemented JWT authentication and online user status tracking to enhance secure real-time communication.
-                    </li>
-                    <li>
-                        Developed RESTful APIs and deployed the full-stack application on Render.
-                    </li>
-                </ul>
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <h3>
+                ConvoHub - Real-Time Chat Application | React.js, Node.js,
+                Socket.io, MongoDB
+              </h3>
             </div>
 
+            <div class="live">
+              <a href="https://convohub-ju3o.onrender.com/">Live | </a>
+              <a href="https://github.com/sushantpal005-pixel/convoHub-mern"
+                >GitHub</a
+              >
+            </div>
+          </div>
 
-            <div class="entry">
-                <div class="entry-header">
-                    <div>
-                        <h3>PassOP - Password Manager | React.js</h3>
-                    </div>
+          <ul>
+            <li>
+              Built a real-time messaging app using MERN stack and Socket.io
+              with under 200ms latency and live online/offline status tracking.
+            </li>
+            <li>
+              Implemented secure JWT-based authentication and session management
+              across 10+ protected API routes to safeguard user data.
+            </li>
+            <li>
+              Designed and deployed 8+ RESTful API endpoints on Render,
+              structuring the backend to handle multiple simultaneous chat
+              sessions in production.
+            </li>
+          </ul>
+        </div>
 
-                    <div class="live">
-                        <a href="https://pass-op-react.vercel.app/">Live | </a>
-                        <a href="https://github.com/sushantpal005-pixel/PassOP-react">GitHub</a>
-                    </div>
-                </div>
-
-                <ul>
-                    <li>
-                        Developed a password management application using React.js for storing and managing user credentials in local storage.
-                    </li>
-                    <li>
-                        <!-- Implemented CRUD functionality for adding, editing, deleting, and copying passwords. -->
-                         Implemented CRUD functionality for creating, editing, deleting, and copying stored password credentials.
-                    </li>
-                    <li>
-                        Built a responsive and user-friendly interface following modern UI/UX practices.
-                    </li>
-                </ul>
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <h3>
+                TaskVault - Task Management System | React.js, Node.js,
+                Express.js, MongoDB
+              </h3>
             </div>
 
-
-
-        </section>
-
-
-        <!-- TECHNICAL SKILLS -->
-        <section>
-            <h2>TECHNICAL SKILLS</h2>
-
-            <div class="skills">
-                <p>
-                    <strong>Languages:</strong>
-                    JavaScript, Java, Python, HTML, CSS
-                </p>
-
-                <p>
-                    <strong>Frontend:</strong>
-                    React.js, Tailwind CSS, RTK Query, Redux Toolkit
-                </p>
-
-                <p>
-                    <strong>Backend:</strong>
-                    Node.js, Express.js, REST APIs, Socket.io
-                </p>
-
-                <p>
-                    <strong>Database:</strong>
-                    MongoDB
-                </p>
-
-                <p>
-                    <strong>Tools:</strong>
-                    Git, GitHub, Postman, VS Code
-                </p>
-
-                <p>
-                    <strong>Concepts:</strong>
-                    Data Structures & Algorithms, OOP, DBMS, Operating Systems
-                </p>
+            <div class="live">
+              <a href="https://taskvault-q0fl.onrender.com">Live | </a>
+              <a href="https://github.com/sushantpal005-pixel/TaskVault">GitHub</a>
             </div>
-        </section>
+          </div>
 
+          <ul>
+            <li>
+              Built a full-stack MERN task management app with React.js,
+              Node.js, Express.js, and MongoDB, implementing 10+ RESTful API
+              endpoints for CRUD operations.
+            </li>
+            <li>
+              Implemented JWT-based authentication and authorization, ensuring
+              secure login and 100% user-specific task access through protected
+              API routes.
+            </li>
+            <li>
+              Developed a responsive React.js interface with task management and
+              status tracking using a scalable REST API architecture.
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <!-- ACHIEVEMENTS -->
-        <section>
-            <h2>ACHIEVEMENTS</h2>
+      <!-- TECHNICAL SKILLS -->
+      <section>
+        <h2>TECHNICAL SKILLS</h2>
 
-            <ul>
-                <li>
-                    Solved 50+ problems on LeetCode covering arrays, strings, binary
-                    search, two pointers, and other DSA patterns.
-                </li>
+        <div class="skills">
+          <p>
+            <strong>Languages:</strong>
+            JavaScript, Java, Python, HTML5, CSS3
+          </p>
 
-                <li>
-                    Developed and deployed multiple full-stack web applications using
-                    React.js, Node.js, Express.js, and MongoDB.
+          <p>
+            <strong>Frontend:</strong>
+            React.js, Redux Toolkit, RTK Query, Tailwind CSS, Responsive Web
+            Design
+          </p>
 
-                </li>
-                <li> Completed multiple full-stack projects featuring JWT authentication, RESTful APIs, CRUD operations, and real-time communication. </li>
-            </ul>
-        </section>
+          <p>
+            <strong>Backend:</strong>
+            Node.js, Express.js, RESTful API Design, Socket.io, JWT
+            Authentication
+          </p>
 
+          <p>
+            <strong>Database:</strong>
+            MongoDB, Database Schema Design
+          </p>
 
-        <!-- CERTIFICATIONS -->
-        <section>
-            <h2>CERTIFICATIONS</h2>
+          <p>
+            <strong>Tools & Platforms:</strong>
+            Git, GitHub, Postman, VS Code, Render, Vercel
+          </p>
 
-            <div class="entry">
-                <ul>
-                    <li>
-                        MERN Stack Development Virtual Internship — EduSkills (AICTE), June–Aug 2026
-                        <a href="https://drive.google.com/file/d/1YfRNL2fvGr2Np6_k_UJyIWedV8DKwiIe/view"
-                            target="_blank">🔗</a> 
-                    </li>
-                    <li>
-                        Google AI-ML Virtual Internship — EduSkills (AICTE), Oct–Dec 2025
-                        <a href="https://drive.google.com/file/d/1X8uutxvXl7afaY8rcq-pn6VbrRrVUR4I/view"
-                            target="_blank">🔗</a>
-                    </li>
+          <p>
+            <strong>Concepts:</strong>
+            Data Structures & Algorithms, Object-Oriented Programming (OOP),
+            DBMS, Operating Systems, MVC Architecture
+          </p>
+        </div>
+      </section>
 
-                </ul>
+      <section>
+        <h2>EDUCATION</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <h3>Raj Kumar Goel Institute of Technology and Management</h3>
+              <p class="degree">B.Tech in Computer Science & Engineering</p>
             </div>
-        </section>
 
+            <div class="right">
+              <span>Ghaziabad, India</span>
+              <span>2023 – 2027</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <h3>SG Publc School</h3>
+              <p class="degree">Class XII</p>
+            </div>
+
+            <div class="right">
+              <span>Ghaziabad, India</span>
+              <span>2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="entry">
+          <div class="entry-header">
+            <div>
+              <h3>Sandhya Public School</h3>
+              <p class="degree">Class X</p>
+            </div>
+
+            <div class="right">
+              <span>Ghaziabad, India</span>
+              <span>2021</span>
+            </div>
+          </div>
+        </div> -->
+      </section>
+
+      <!-- ACHIEVEMENTS -->
+      <section>
+        <h2>ACHIEVEMENTS</h2>
+
+        <ul>
+          <li>
+            Solved 50+ data structures and algorithms problems on LeetCode,
+            covering arrays, strings, binary search, and two-pointer techniques.
+          </li>
+
+          <li>
+            Independently developed and deployed 3 full-stack web applications
+            using React.js, Node.js, Express.js, and MongoDB, each live in
+            production.
+          </li>
+        </ul>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section>
+        <h2>CERTIFICATIONS</h2>
+
+        <div class="entry">
+          <ul>
+            <li>
+              MERN Stack Development Virtual Internship Certificate — EduSkills
+              (AICTE), Aug 2026 —
+              <a
+                href="https://drive.google.com/file/d/1YfRNL2fvGr2Np6_k_UJyIWedV8DKwiIe/view"
+                target="_blank"
+                >View Certificate</a
+              >
+            </li>
+            <li>
+              Google AI-ML Virtual Internship Certificate — EduSkills (AICTE),
+              Dec 2025 —
+              <a
+                href="https://drive.google.com/file/d/1X8uutxvXl7afaY8rcq-pn6VbrRrVUR4I/view"
+                target="_blank"
+                >View Certificate</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
-
-</body>
-
+  </body>
 </html>
