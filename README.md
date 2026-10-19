@@ -99,4 +99,4 @@ I'm looking for opportunities where I can work on real-world software products, 
 
 ---
 
-⭐ Feel free to explore my repositories and projects.
+
